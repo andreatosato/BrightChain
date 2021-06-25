@@ -1,0 +1,1002 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TransactableBlock
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TransactableBlock
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BrightChain.Models.Blocks.TransactableBlock">
+  
+  
+  <h1 id="BrightChain_Models_Blocks_TransactableBlock" data-uid="BrightChain.Models.Blocks.TransactableBlock" class="text-break">Class TransactableBlock
+  </h1>
+  <div class="markdown level0 summary"><p>Block that is able to be stored, rolled back, committed, or prevented from being stored.
+TODO: Currently heavily associated with underlying BPlusTree. Abstract
+TODO: base off TransactedCompoundFile?</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="BrightChain.Models.Blocks.Block.html">Block</a></div>
+    <div class="level2"><span class="xref">TransactableBlock</span></div>
+      <div class="level3"><a class="xref" href="BrightChain.Models.Blocks.DiskBlock.html">DiskBlock</a></div>
+      <div class="level3"><a class="xref" href="BrightChain.Models.Blocks.MemoryBlock.html">MemoryBlock</a></div>
+      <div class="level3"><a class="xref" href="BrightChain.Models.Blocks.RandomizerBlock.html">RandomizerBlock</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="BrightChain.Models.Blocks.Block.html">Block</a>&gt;</div>
+    <div><a class="xref" href="BrightChain.Interfaces.ITransactableBlock.html">ITransactableBlock</a></div>
+    <div><a class="xref" href="BrightChain.Interfaces.IBlock.html">IBlock</a></div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="BrightChain.Interfaces.IBlock.html">IBlock</a>&gt;</div>
+    <div><span class="xref">CSharpTest.Net.Interfaces.ITransactable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>&gt;</div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="BrightChain.Interfaces.ITransactableBlock.html">ITransactableBlock</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_Id">Block.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_StorageContract">Block.StorageContract</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_RedundancyContract">Block.RedundancyContract</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_Data">Block.Data</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_BlockSize">Block.BlockSize</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_HashVerified">Block.HashVerified</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_ConstituentBlocks">Block.ConstituentBlocks</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_ConstituentBlockListBlock">Block.ConstituentBlockListBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_MetaData">Block.MetaData</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_AsBlock">Block.AsBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_ValidationExceptions">Block.ValidationExceptions</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_XOR_BrightChain_Models_Blocks_Block_">Block.XOR(Block)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_XOR_BrightChain_Models_Blocks_Block___">Block.XOR(Block[])</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_Validate">Block.Validate()</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_CompareTo_BrightChain_Interfaces_IBlock_">Block.CompareTo(IBlock)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_CompareTo_BrightChain_Models_Blocks_Block_">Block.CompareTo(Block)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BrightChain.Models.Blocks.html">BrightChain.Models.Blocks</a></h6>
+  <h6><strong>Assembly</strong>: BrightChain.dll</h6>
+  <h5 id="BrightChain_Models_Blocks_TransactableBlock_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TransactableBlock : Block, IComparable&lt;Block&gt;, ITransactableBlock, IBlock, IComparable&lt;IBlock&gt;, ITransactable, IDisposable, IComparable&lt;TransactableBlock&gt;, IComparable&lt;ITransactableBlock&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock__ctor.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L37">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock__ctor_" data-uid="BrightChain.Models.Blocks.TransactableBlock.#ctor*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock__ctor" data-uid="BrightChain.Models.Blocks.TransactableBlock.#ctor">TransactableBlock()</h4>
+  <div class="markdown level1 summary"><p>For test methods</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactableBlock()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock__ctor_BrightChain_Services_BPlusTreeCacheManager_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock_BrightChain_Helpers_BlockHashSerializer_BrightChain_Helpers_BlockSerializer_BrightChain_Models_Blocks_TransactableBlock___System_DateTime_System_DateTime_BrightChain_Enumerations_RedundancyContractType_System_ReadOnlyMemory_System_Byte__System_Boolean_.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.%23ctor(BrightChain.Services.BPlusTreeCacheManager%7BBrightChain.Models.Blocks.BlockHash%2CBrightChain.Models.Blocks.TransactableBlock%2CBrightChain.Helpers.BlockHashSerializer%2CBrightChain.Helpers.BlockSerializer%7BBrightChain.Models.Blocks.TransactableBlock%7D%7D%2CSystem.DateTime%2CSystem.DateTime%2CBrightChain.Enumerations.RedundancyContractType%2CSystem.ReadOnlyMemory%7BSystem.Byte%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L26">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock__ctor_" data-uid="BrightChain.Models.Blocks.TransactableBlock.#ctor*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock__ctor_BrightChain_Services_BPlusTreeCacheManager_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock_BrightChain_Helpers_BlockHashSerializer_BrightChain_Helpers_BlockSerializer_BrightChain_Models_Blocks_TransactableBlock___System_DateTime_System_DateTime_BrightChain_Enumerations_RedundancyContractType_System_ReadOnlyMemory_System_Byte__System_Boolean_" data-uid="BrightChain.Models.Blocks.TransactableBlock.#ctor(BrightChain.Services.BPlusTreeCacheManager{BrightChain.Models.Blocks.BlockHash,BrightChain.Models.Blocks.TransactableBlock,BrightChain.Helpers.BlockHashSerializer,BrightChain.Helpers.BlockSerializer{BrightChain.Models.Blocks.TransactableBlock}},System.DateTime,System.DateTime,BrightChain.Enumerations.RedundancyContractType,System.ReadOnlyMemory{System.Byte},System.Boolean)">TransactableBlock(BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;, DateTime, DateTime, RedundancyContractType, ReadOnlyMemory&lt;Byte&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactableBlock(BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt; cacheManager, DateTime requestTime, DateTime keepUntilAtLeast, RedundancyContractType redundancy, ReadOnlyMemory&lt;byte&gt; data, bool allowCommit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html">BPlusTreeCacheManager</a>&lt;<a class="xref" href="BrightChain.Models.Blocks.BlockHash.html">BlockHash</a>, <a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>, <a class="xref" href="BrightChain.Helpers.BlockHashSerializer.html">BlockHashSerializer</a>, <a class="xref" href="BrightChain.Helpers.BlockSerializer-1.html">BlockSerializer</a>&lt;<a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>&gt;&gt;</td>
+        <td><span class="parametername">cacheManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">requestTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">keepUntilAtLeast</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BrightChain.Enumerations.RedundancyContractType.html">RedundancyContractType</a></td>
+        <td><span class="parametername">redundancy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ReadOnlyMemory</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowCommit</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_tree.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.tree%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L21">View Source</a>
+  </span>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_tree" data-uid="BrightChain.Models.Blocks.TransactableBlock.tree">tree</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BPlusTree&lt;BlockHash, TransactableBlock&gt; tree</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree</span>&lt;<a class="xref" href="BrightChain.Models.Blocks.BlockHash.html">BlockHash</a>, <a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_AllowCommit.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.AllowCommit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L24">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_AllowCommit_" data-uid="BrightChain.Models.Blocks.TransactableBlock.AllowCommit*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_AllowCommit" data-uid="BrightChain.Models.Blocks.TransactableBlock.AllowCommit">AllowCommit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowCommit { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_CacheManager.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.CacheManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L22">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_CacheManager_" data-uid="BrightChain.Models.Blocks.TransactableBlock.CacheManager*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_CacheManager" data-uid="BrightChain.Models.Blocks.TransactableBlock.CacheManager">CacheManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt; CacheManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html">BPlusTreeCacheManager</a>&lt;<a class="xref" href="BrightChain.Models.Blocks.BlockHash.html">BlockHash</a>, <a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>, <a class="xref" href="BrightChain.Helpers.BlockHashSerializer.html">BlockHashSerializer</a>, <a class="xref" href="BrightChain.Helpers.BlockSerializer-1.html">BlockSerializer</a>&lt;<a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_Committed.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.Committed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L23">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_Committed_" data-uid="BrightChain.Models.Blocks.TransactableBlock.Committed*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_Committed" data-uid="BrightChain.Models.Blocks.TransactableBlock.Committed">Committed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Committed { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_Commit.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.Commit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L60">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_Commit_" data-uid="BrightChain.Models.Blocks.TransactableBlock.Commit*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_Commit" data-uid="BrightChain.Models.Blocks.TransactableBlock.Commit">Commit()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Commit()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_CompareTo_BrightChain_Interfaces_ITransactableBlock_.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.CompareTo(BrightChain.Interfaces.ITransactableBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L95">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_CompareTo_" data-uid="BrightChain.Models.Blocks.TransactableBlock.CompareTo*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_CompareTo_BrightChain_Interfaces_ITransactableBlock_" data-uid="BrightChain.Models.Blocks.TransactableBlock.CompareTo(BrightChain.Interfaces.ITransactableBlock)">CompareTo(ITransactableBlock)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(ITransactableBlock other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Interfaces.ITransactableBlock.html">ITransactableBlock</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_CompareTo_BrightChain_Models_Blocks_TransactableBlock_.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.CompareTo(BrightChain.Models.Blocks.TransactableBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L93">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_CompareTo_" data-uid="BrightChain.Models.Blocks.TransactableBlock.CompareTo*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_CompareTo_BrightChain_Models_Blocks_TransactableBlock_" data-uid="BrightChain.Models.Blocks.TransactableBlock.CompareTo(BrightChain.Models.Blocks.TransactableBlock)">CompareTo(TransactableBlock)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(TransactableBlock other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_Dispose.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L122">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_Dispose_" data-uid="BrightChain.Models.Blocks.TransactableBlock.Dispose*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_Dispose" data-uid="BrightChain.Models.Blocks.TransactableBlock.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Dispose()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_Dispose">Block.Dispose()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L97">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_Dispose_" data-uid="BrightChain.Models.Blocks.TransactableBlock.Dispose*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_Dispose_System_Boolean_" data-uid="BrightChain.Models.Blocks.TransactableBlock.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_Equals_System_Object_.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L89">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_Equals_" data-uid="BrightChain.Models.Blocks.TransactableBlock.Equals*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_Equals_System_Object_" data-uid="BrightChain.Models.Blocks.TransactableBlock.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_Equals_System_Object_">Block.Equals(Object)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_GetHashCode.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L91">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_GetHashCode_" data-uid="BrightChain.Models.Blocks.TransactableBlock.GetHashCode*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_GetHashCode" data-uid="BrightChain.Models.Blocks.TransactableBlock.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_GetHashCode">Block.GetHashCode()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_NewBlock_System_DateTime_System_DateTime_BrightChain_Enumerations_RedundancyContractType_System_ReadOnlyMemory_System_Byte__System_Boolean_.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.NewBlock(System.DateTime%2CSystem.DateTime%2CBrightChain.Enumerations.RedundancyContractType%2CSystem.ReadOnlyMemory%7BSystem.Byte%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L87">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_NewBlock_" data-uid="BrightChain.Models.Blocks.TransactableBlock.NewBlock*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_NewBlock_System_DateTime_System_DateTime_BrightChain_Enumerations_RedundancyContractType_System_ReadOnlyMemory_System_Byte__System_Boolean_" data-uid="BrightChain.Models.Blocks.TransactableBlock.NewBlock(System.DateTime,System.DateTime,BrightChain.Enumerations.RedundancyContractType,System.ReadOnlyMemory{System.Byte},System.Boolean)">NewBlock(DateTime, DateTime, RedundancyContractType, ReadOnlyMemory&lt;Byte&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Block NewBlock(DateTime requestTime, DateTime keepUntilAtLeast, RedundancyContractType redundancy, ReadOnlyMemory&lt;byte&gt; data, bool allowCommit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">requestTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">keepUntilAtLeast</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BrightChain.Enumerations.RedundancyContractType.html">RedundancyContractType</a></td>
+        <td><span class="parametername">redundancy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ReadOnlyMemory</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowCommit</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Models.Blocks.Block.html">Block</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_NewBlock_System_DateTime_System_DateTime_BrightChain_Enumerations_RedundancyContractType_System_ReadOnlyMemory_System_Byte__System_Boolean_">Block.NewBlock(DateTime, DateTime, RedundancyContractType, ReadOnlyMemory&lt;Byte&gt;, Boolean)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_Rollback.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.Rollback%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L76">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_Rollback_" data-uid="BrightChain.Models.Blocks.TransactableBlock.Rollback*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_Rollback" data-uid="BrightChain.Models.Blocks.TransactableBlock.Rollback">Rollback()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Rollback()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_SetCacheManager_BrightChain_Services_BPlusTreeCacheManager_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock_BrightChain_Helpers_BlockHashSerializer_BrightChain_Helpers_BlockSerializer_BrightChain_Models_Blocks_TransactableBlock___.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.SetCacheManager(BrightChain.Services.BPlusTreeCacheManager%7BBrightChain.Models.Blocks.BlockHash%2CBrightChain.Models.Blocks.TransactableBlock%2CBrightChain.Helpers.BlockHashSerializer%2CBrightChain.Helpers.BlockSerializer%7BBrightChain.Models.Blocks.TransactableBlock%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L46">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_SetCacheManager_" data-uid="BrightChain.Models.Blocks.TransactableBlock.SetCacheManager*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_SetCacheManager_BrightChain_Services_BPlusTreeCacheManager_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock_BrightChain_Helpers_BlockHashSerializer_BrightChain_Helpers_BlockSerializer_BrightChain_Models_Blocks_TransactableBlock___" data-uid="BrightChain.Models.Blocks.TransactableBlock.SetCacheManager(BrightChain.Services.BPlusTreeCacheManager{BrightChain.Models.Blocks.BlockHash,BrightChain.Models.Blocks.TransactableBlock,BrightChain.Helpers.BlockHashSerializer,BrightChain.Helpers.BlockSerializer{BrightChain.Models.Blocks.TransactableBlock}})">SetCacheManager(BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCacheManager(BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt; cacheManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html">BPlusTreeCacheManager</a>&lt;<a class="xref" href="BrightChain.Models.Blocks.BlockHash.html">BlockHash</a>, <a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>, <a class="xref" href="BrightChain.Helpers.BlockHashSerializer.html">BlockHashSerializer</a>, <a class="xref" href="BrightChain.Helpers.BlockSerializer-1.html">BlockSerializer</a>&lt;<a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>&gt;&gt;</td>
+        <td><span class="parametername">cacheManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_TreeIsEqual_CSharpTest_Net_Collections_BPlusTree_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock__.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.TreeIsEqual(CSharpTest.Net.Collections.BPlusTree%7BBrightChain.Models.Blocks.BlockHash%2CBrightChain.Models.Blocks.TransactableBlock%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L52">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_TreeIsEqual_" data-uid="BrightChain.Models.Blocks.TransactableBlock.TreeIsEqual*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_TreeIsEqual_CSharpTest_Net_Collections_BPlusTree_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock__" data-uid="BrightChain.Models.Blocks.TransactableBlock.TreeIsEqual(CSharpTest.Net.Collections.BPlusTree{BrightChain.Models.Blocks.BlockHash,BrightChain.Models.Blocks.TransactableBlock})">TreeIsEqual(BPlusTree&lt;BlockHash, TransactableBlock&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TreeIsEqual(BPlusTree&lt;BlockHash, TransactableBlock&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree</span>&lt;<a class="xref" href="BrightChain.Models.Blocks.BlockHash.html">BlockHash</a>, <a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_TreeIsSame_CSharpTest_Net_Collections_BPlusTree_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock__.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.TreeIsSame(CSharpTest.Net.Collections.BPlusTree%7BBrightChain.Models.Blocks.BlockHash%2CBrightChain.Models.Blocks.TransactableBlock%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L54">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_TreeIsSame_" data-uid="BrightChain.Models.Blocks.TransactableBlock.TreeIsSame*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_TreeIsSame_CSharpTest_Net_Collections_BPlusTree_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock__" data-uid="BrightChain.Models.Blocks.TransactableBlock.TreeIsSame(CSharpTest.Net.Collections.BPlusTree{BrightChain.Models.Blocks.BlockHash,BrightChain.Models.Blocks.TransactableBlock})">TreeIsSame(BPlusTree&lt;BlockHash, TransactableBlock&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TreeIsSame(BPlusTree&lt;BlockHash, TransactableBlock&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree</span>&lt;<a class="xref" href="BrightChain.Models.Blocks.BlockHash.html">BlockHash</a>, <a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_op_Equality_BrightChain_Models_Blocks_TransactableBlock_BrightChain_Models_Blocks_TransactableBlock_.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.op_Equality(BrightChain.Models.Blocks.TransactableBlock%2CBrightChain.Models.Blocks.TransactableBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L56">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_op_Equality_" data-uid="BrightChain.Models.Blocks.TransactableBlock.op_Equality*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_op_Equality_BrightChain_Models_Blocks_TransactableBlock_BrightChain_Models_Blocks_TransactableBlock_" data-uid="BrightChain.Models.Blocks.TransactableBlock.op_Equality(BrightChain.Models.Blocks.TransactableBlock,BrightChain.Models.Blocks.TransactableBlock)">Equality(TransactableBlock, TransactableBlock)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(TransactableBlock a, TransactableBlock b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock_op_Inequality_BrightChain_Models_Blocks_TransactableBlock_BrightChain_Models_Blocks_TransactableBlock_.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock.op_Inequality(BrightChain.Models.Blocks.TransactableBlock%2CBrightChain.Models.Blocks.TransactableBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L58">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_TransactableBlock_op_Inequality_" data-uid="BrightChain.Models.Blocks.TransactableBlock.op_Inequality*"></a>
+  <h4 id="BrightChain_Models_Blocks_TransactableBlock_op_Inequality_BrightChain_Models_Blocks_TransactableBlock_BrightChain_Models_Blocks_TransactableBlock_" data-uid="BrightChain.Models.Blocks.TransactableBlock.op_Inequality(BrightChain.Models.Blocks.TransactableBlock,BrightChain.Models.Blocks.TransactableBlock)">Inequality(TransactableBlock, TransactableBlock)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(TransactableBlock a, TransactableBlock b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="BrightChain.Interfaces.ITransactableBlock.html">ITransactableBlock</a>
+  </div>
+  <div>
+      <a class="xref" href="BrightChain.Interfaces.IBlock.html">IBlock</a>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">CSharpTest.Net.Interfaces.ITransactable</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="BrightChain.Extensions.BlockMetadataExtensions.html#BrightChain_Extensions_BlockMetadataExtensions_MetaDataBytes_BrightChain_Models_Blocks_Block_">BlockMetadataExtensions.MetaDataBytes(Block)</a>
+  </div>
+  <div>
+      <a class="xref" href="BrightChain.Extensions.BlockMetadataExtensions.html#BrightChain_Extensions_BlockMetadataExtensions_RestoreMetaDataFromBytes_BrightChain_Models_Blocks_Block_System_ReadOnlyMemory_System_Byte__">BlockMetadataExtensions.RestoreMetaDataFromBytes(Block, ReadOnlyMemory&lt;Byte&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_TransactableBlock.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.TransactableBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/TransactableBlock.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

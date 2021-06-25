@@ -1,0 +1,928 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BPlusTreeCacheManager&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BPlusTreeCacheManager&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt;
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BrightChain.Services.BPlusTreeCacheManager`4">
+  
+  
+  <h1 id="BrightChain_Services_BPlusTreeCacheManager_4" data-uid="BrightChain.Services.BPlusTreeCacheManager`4" class="text-break">Class BPlusTreeCacheManager&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Special intance of CacheManager that is BTree backed. Works for disk and memory and has transaction support.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BPlusTreeCacheManager&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt;</span></div>
+      <div class="level2"><a class="xref" href="BrightChain.Services.BlockCacheManager.html">BlockCacheManager</a></div>
+      <div class="level2"><a class="xref" href="BrightChain.Services.DiskBPlusTreeCacheManager-4.html">DiskBPlusTreeCacheManager&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt;</a></div>
+      <div class="level2"><a class="xref" href="BrightChain.Services.MemoryBPlusTreeCacheManager-4.html">MemoryBPlusTreeCacheManager&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt;</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="BrightChain.Interfaces.IBPlusTreeCacheManager-2.html">IBPlusTreeCacheManager</a>&lt;Tkey, Tvalue&gt;</div>
+    <div><a class="xref" href="BrightChain.Interfaces.ICacheManager-2.html">ICacheManager</a>&lt;Tkey, Tvalue&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BrightChain.Services.html">BrightChain.Services</a></h6>
+  <h6><strong>Assembly</strong>: BrightChain.dll</h6>
+  <h5 id="BrightChain_Services_BPlusTreeCacheManager_4_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BPlusTreeCacheManager&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt; : IBPlusTreeCacheManager&lt;Tkey, Tvalue&gt;, ICacheManager&lt;Tkey, Tvalue&gt; where Tkey : IComparable&lt;Tkey&gt; where Tvalue : IComparable&lt;Tvalue&gt; where TkeySerializer : ISerializer&lt;Tkey&gt;, new()
+    where TvalueSerializer : ISerializer&lt;Tvalue&gt;, new()</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">Tkey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Tvalue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TkeySerializer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TvalueSerializer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4__ctor_BrightChain_Services_BPlusTreeCacheManager__0__1__2__3__.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.%23ctor(BrightChain.Services.BPlusTreeCacheManager%7B%600%2C%601%2C%602%2C%603%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L64">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4__ctor_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.#ctor*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4__ctor_BrightChain_Services_BPlusTreeCacheManager__0__1__2__3__" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.#ctor(BrightChain.Services.BPlusTreeCacheManager{`0,`1,`2,`3})">BPlusTreeCacheManager(BPlusTreeCacheManager&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BPlusTreeCacheManager(BPlusTreeCacheManager&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html">BPlusTreeCacheManager</a>&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4__ctor_Microsoft_Extensions_Logging_ILogger_CSharpTest_Net_Collections_BPlusTree__0__1__.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.%23ctor(Microsoft.Extensions.Logging.ILogger%2CCSharpTest.Net.Collections.BPlusTree%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L54">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4__ctor_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.#ctor*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4__ctor_Microsoft_Extensions_Logging_ILogger_CSharpTest_Net_Collections_BPlusTree__0__1__" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.#ctor(Microsoft.Extensions.Logging.ILogger,CSharpTest.Net.Collections.BPlusTree{`0,`1})">BPlusTreeCacheManager(ILogger, BPlusTree&lt;Tkey, Tvalue&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BPlusTreeCacheManager(ILogger logger, BPlusTree&lt;Tkey, Tvalue&gt; tree)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree</span>&lt;Tkey, Tvalue&gt;</td>
+        <td><span class="parametername">tree</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_expirationCache.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.expirationCache%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L33">View Source</a>
+  </span>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_expirationCache" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.expirationCache">expirationCache</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly BlockCacheExpirationCache&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt; expirationCache</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Services.BlockCacheExpirationCache-4.html">BlockCacheExpirationCache</a>&lt;Tkey, Tvalue, TkeySerializer, TvalueSerializer&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_logger.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.logger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L31">View Source</a>
+  </span>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_logger" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.logger">logger</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ILogger logger</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_transactionLog.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.transactionLog%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L34">View Source</a>
+  </span>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_transactionLog" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.transactionLog">transactionLog</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TempFile transactionLog</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.IO.TempFile</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_EnableCount.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.EnableCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L29">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_EnableCount_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.EnableCount*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_EnableCount" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.EnableCount">EnableCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool EnableCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_TransactionLogPath.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.TransactionLogPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L52">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_TransactionLogPath_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.TransactionLogPath*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_TransactionLogPath" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.TransactionLogPath">TransactionLogPath</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TransactionLogPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_ApplyTreeActions_System_Action_CSharpTest_Net_Collections_BPlusTree__0__1_____.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.ApplyTreeActions(System.Action%7BCSharpTest.Net.Collections.BPlusTree%7B%600%2C%601%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L76">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_ApplyTreeActions_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.ApplyTreeActions*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_ApplyTreeActions_System_Action_CSharpTest_Net_Collections_BPlusTree__0__1_____" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.ApplyTreeActions(System.Action{CSharpTest.Net.Collections.BPlusTree{`0,`1}}[])">ApplyTreeActions(Action&lt;BPlusTree&lt;Tkey, Tvalue&gt;&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplyTreeActions(Action&lt;BPlusTree&lt;Tkey, Tvalue&gt;&gt;[] actions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">CSharpTest.Net.Collections.BPlusTree</span>&lt;Tkey, Tvalue&gt;&gt;[]</td>
+        <td><span class="parametername">actions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_Commit.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.Commit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L141">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_Commit_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Commit*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_Commit" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Commit">Commit()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Commit()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_Contains__0_.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.Contains(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L120">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_Contains_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Contains*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_Contains__0_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Contains(`0)">Contains(Tkey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(Tkey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tkey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_DefaultOptions_CSharpTest_Net_Collections_BPlusTree__0__1__OptionsV2_.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.DefaultOptions(CSharpTest.Net.Collections.BPlusTree%7B%600%2C%601%7D.OptionsV2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L40">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_DefaultOptions_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.DefaultOptions*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_DefaultOptions_CSharpTest_Net_Collections_BPlusTree__0__1__OptionsV2_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.DefaultOptions(CSharpTest.Net.Collections.BPlusTree{`0,`1}.OptionsV2)">DefaultOptions(BPlusTree&lt;Tkey, Tvalue&gt;.OptionsV2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BPlusTree&lt;Tkey, Tvalue&gt;.OptionsV2 DefaultOptions(BPlusTree&lt;Tkey, Tvalue&gt;.OptionsV2 options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree.OptionsV2</span>&lt;&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree.OptionsV2</span>&lt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_Drop__0_System_Boolean_.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.Drop(%600%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L122">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_Drop_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Drop*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_Drop__0_System_Boolean_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Drop(`0,System.Boolean)">Drop(Tkey, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Drop(Tkey key, bool noCheckContains = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tkey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noCheckContains</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_Get__0_.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.Get(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L94">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_Get_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Get*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_Get__0_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Get(`0)">Get(Tkey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Tvalue Get(Tkey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tkey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tvalue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_NewTransactionLogOptions.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.NewTransactionLogOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L47">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_NewTransactionLogOptions_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.NewTransactionLogOptions*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_NewTransactionLogOptions" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.NewTransactionLogOptions">NewTransactionLogOptions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionLogOptions&lt;Tkey, Tvalue&gt; NewTransactionLogOptions()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.TransactionLogOptions</span>&lt;Tkey, Tvalue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_Rollback.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.Rollback%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L151">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_Rollback_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Rollback*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_Rollback" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Rollback">Rollback()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Rollback()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_Set__0__1_.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.Set(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L109">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_Set_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Set*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_Set__0__1_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.Set(`0,`1)">Set(Tkey, Tvalue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(Tkey key, Tvalue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tkey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tvalue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_TreeIsEqual_CSharpTest_Net_Collections_BPlusTree__0__1__.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.TreeIsEqual(CSharpTest.Net.Collections.BPlusTree%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L137">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_TreeIsEqual_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.TreeIsEqual*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_TreeIsEqual_CSharpTest_Net_Collections_BPlusTree__0__1__" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.TreeIsEqual(CSharpTest.Net.Collections.BPlusTree{`0,`1})">TreeIsEqual(BPlusTree&lt;Tkey, Tvalue&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TreeIsEqual(BPlusTree&lt;Tkey, Tvalue&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree</span>&lt;Tkey, Tvalue&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_TreeIsSame_CSharpTest_Net_Collections_BPlusTree__0__1__.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.TreeIsSame(CSharpTest.Net.Collections.BPlusTree%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L139">View Source</a>
+  </span>
+  <a id="BrightChain_Services_BPlusTreeCacheManager_4_TreeIsSame_" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.TreeIsSame*"></a>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_TreeIsSame_CSharpTest_Net_Collections_BPlusTree__0__1__" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.TreeIsSame(CSharpTest.Net.Collections.BPlusTree{`0,`1})">TreeIsSame(BPlusTree&lt;Tkey, Tvalue&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TreeIsSame(BPlusTree&lt;Tkey, Tvalue&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree</span>&lt;Tkey, Tvalue&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_CacheMiss.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.CacheMiss%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L38">View Source</a>
+  </span>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_CacheMiss" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.CacheMiss">CacheMiss</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event ICacheManager&lt;Tkey, Tvalue&gt;.CacheMissEventHandler CacheMiss</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Interfaces.ICacheManager-2.CacheMissEventHandler.html">ICacheManager.CacheMissEventHandler</a>&lt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_KeyAdded.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.KeyAdded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L36">View Source</a>
+  </span>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_KeyAdded" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.KeyAdded">KeyAdded</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event ICacheManager&lt;Tkey, Tvalue&gt;.KeyAddedEventHandler KeyAdded</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Interfaces.ICacheManager-2.KeyAddedEventHandler.html">ICacheManager.KeyAddedEventHandler</a>&lt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4_KeyRemoved.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604.KeyRemoved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L37">View Source</a>
+  </span>
+  <h4 id="BrightChain_Services_BPlusTreeCacheManager_4_KeyRemoved" data-uid="BrightChain.Services.BPlusTreeCacheManager`4.KeyRemoved">KeyRemoved</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event ICacheManager&lt;Tkey, Tvalue&gt;.KeyRemovedEventHandler KeyRemoved</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Interfaces.ICacheManager-2.KeyRemovedEventHandler.html">ICacheManager.KeyRemovedEventHandler</a>&lt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="BrightChain.Interfaces.IBPlusTreeCacheManager-2.html">IBPlusTreeCacheManager&lt;Tkey, Tvalue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="BrightChain.Interfaces.ICacheManager-2.html">ICacheManager&lt;Tkey, Tvalue&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_BPlusTreeCacheManager_4.md&amp;value=---%0Auid%3A%20BrightChain.Services.BPlusTreeCacheManager%604%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/BPlusTreeCacheManager.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

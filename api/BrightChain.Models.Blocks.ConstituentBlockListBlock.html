@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ConstituentBlockListBlock
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ConstituentBlockListBlock
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock">
+  
+  
+  <h1 id="BrightChain_Models_Blocks_ConstituentBlockListBlock" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock" class="text-break">Class ConstituentBlockListBlock
+  </h1>
+  <div class="markdown level0 summary"><p>A block which describes the hashes of all of the blocks needed to reconstitute a resultant block.
+TODO: Ensure that the resultant list doesn't exceed a block, split into two lists, make a new top block, etc.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="BrightChain.Models.Blocks.Block.html">Block</a></div>
+    <div class="level2"><span class="xref">ConstituentBlockListBlock</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="BrightChain.Interfaces.IBlock.html">IBlock</a></div>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="BrightChain.Interfaces.IBlock.html">IBlock</a>&gt;</div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="BrightChain.Models.Blocks.Block.html">Block</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_Id">Block.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_StorageContract">Block.StorageContract</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_RedundancyContract">Block.RedundancyContract</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_BlockSize">Block.BlockSize</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_HashVerified">Block.HashVerified</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_ConstituentBlockListBlock">Block.ConstituentBlockListBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_MetaData">Block.MetaData</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_AsBlock">Block.AsBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_ValidationExceptions">Block.ValidationExceptions</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_XOR_BrightChain_Models_Blocks_Block_">Block.XOR(Block)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_XOR_BrightChain_Models_Blocks_Block___">Block.XOR(Block[])</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_Validate">Block.Validate()</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_Equals_System_Object_">Block.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_GetHashCode">Block.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_CompareTo_BrightChain_Interfaces_IBlock_">Block.CompareTo(IBlock)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_CompareTo_BrightChain_Models_Blocks_Block_">Block.CompareTo(Block)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BrightChain.Models.Blocks.html">BrightChain.Models.Blocks</a></h6>
+  <h6><strong>Assembly</strong>: BrightChain.dll</h6>
+  <h5 id="BrightChain_Models_Blocks_ConstituentBlockListBlock_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ConstituentBlockListBlock : Block, IBlock, IDisposable, IComparable&lt;IBlock&gt;, IComparable&lt;Block&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_ConstituentBlockListBlock__ctor_BrightChain_Models_Blocks_Block_.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.ConstituentBlockListBlock.%23ctor(BrightChain.Models.Blocks.Block)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/ConstituentBlockListBlock.cs/#L24">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_ConstituentBlockListBlock__ctor_" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.#ctor*"></a>
+  <h4 id="BrightChain_Models_Blocks_ConstituentBlockListBlock__ctor_BrightChain_Models_Blocks_Block_" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.#ctor(BrightChain.Models.Blocks.Block)">ConstituentBlockListBlock(Block)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConstituentBlockListBlock(Block sourceBlock)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Models.Blocks.Block.html">Block</a></td>
+        <td><span class="parametername">sourceBlock</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_ConstituentBlockListBlock__ctor_System_DateTime_System_DateTime_BrightChain_Enumerations_RedundancyContractType_.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.ConstituentBlockListBlock.%23ctor(System.DateTime%2CSystem.DateTime%2CBrightChain.Enumerations.RedundancyContractType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/ConstituentBlockListBlock.cs/#L17">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_ConstituentBlockListBlock__ctor_" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.#ctor*"></a>
+  <h4 id="BrightChain_Models_Blocks_ConstituentBlockListBlock__ctor_System_DateTime_System_DateTime_BrightChain_Enumerations_RedundancyContractType_" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.#ctor(System.DateTime,System.DateTime,BrightChain.Enumerations.RedundancyContractType)">ConstituentBlockListBlock(DateTime, DateTime, RedundancyContractType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConstituentBlockListBlock(DateTime requestTime, DateTime keepUntilAtLeast, RedundancyContractType redundancy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">requestTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">keepUntilAtLeast</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BrightChain.Enumerations.RedundancyContractType.html">RedundancyContractType</a></td>
+        <td><span class="parametername">redundancy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_ConstituentBlockListBlock_ConstituentBlocks.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.ConstituentBlockListBlock.ConstituentBlocks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/ConstituentBlockListBlock.cs/#L14">View Source</a>
+  </span>
+  <h4 id="BrightChain_Models_Blocks_ConstituentBlockListBlock_ConstituentBlocks" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.ConstituentBlocks">ConstituentBlocks</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly IEnumerable&lt;Block&gt; ConstituentBlocks</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="BrightChain.Models.Blocks.Block.html">Block</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_ConstituentBlockListBlock_ConstituentBlockHashes.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.ConstituentBlockListBlock.ConstituentBlockHashes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/ConstituentBlockListBlock.cs/#L35">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_ConstituentBlockListBlock_ConstituentBlockHashes_" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.ConstituentBlockHashes*"></a>
+  <h4 id="BrightChain_Models_Blocks_ConstituentBlockListBlock_ConstituentBlockHashes" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.ConstituentBlockHashes">ConstituentBlockHashes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;BlockHash&gt; ConstituentBlockHashes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="BrightChain.Models.Blocks.BlockHash.html">BlockHash</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_ConstituentBlockListBlock_Data.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.ConstituentBlockListBlock.Data%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/ConstituentBlockListBlock.cs/#L40">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_ConstituentBlockListBlock_Data_" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.Data*"></a>
+  <h4 id="BrightChain_Models_Blocks_ConstituentBlockListBlock_Data" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.Data">Data</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlyMemory&lt;byte&gt; Data { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ReadOnlyMemory</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_ConstituentBlockListBlock_TotalCost.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.ConstituentBlockListBlock.TotalCost%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/ConstituentBlockListBlock.cs/#L47">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_ConstituentBlockListBlock_TotalCost_" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.TotalCost*"></a>
+  <h4 id="BrightChain_Models_Blocks_ConstituentBlockListBlock_TotalCost" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.TotalCost">TotalCost</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_ConstituentBlockListBlock_Dispose.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.ConstituentBlockListBlock.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/ConstituentBlockListBlock.cs/#L50">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_ConstituentBlockListBlock_Dispose_" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.Dispose*"></a>
+  <h4 id="BrightChain_Models_Blocks_ConstituentBlockListBlock_Dispose" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Dispose()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_Dispose">Block.Dispose()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_ConstituentBlockListBlock_NewBlock_System_DateTime_System_DateTime_BrightChain_Enumerations_RedundancyContractType_System_ReadOnlyMemory_System_Byte__System_Boolean_.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.ConstituentBlockListBlock.NewBlock(System.DateTime%2CSystem.DateTime%2CBrightChain.Enumerations.RedundancyContractType%2CSystem.ReadOnlyMemory%7BSystem.Byte%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/ConstituentBlockListBlock.cs/#L54">View Source</a>
+  </span>
+  <a id="BrightChain_Models_Blocks_ConstituentBlockListBlock_NewBlock_" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.NewBlock*"></a>
+  <h4 id="BrightChain_Models_Blocks_ConstituentBlockListBlock_NewBlock_System_DateTime_System_DateTime_BrightChain_Enumerations_RedundancyContractType_System_ReadOnlyMemory_System_Byte__System_Boolean_" data-uid="BrightChain.Models.Blocks.ConstituentBlockListBlock.NewBlock(System.DateTime,System.DateTime,BrightChain.Enumerations.RedundancyContractType,System.ReadOnlyMemory{System.Byte},System.Boolean)">NewBlock(DateTime, DateTime, RedundancyContractType, ReadOnlyMemory&lt;Byte&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Block NewBlock(DateTime requestTime, DateTime keepUntilAtLeast, RedundancyContractType redundancy, ReadOnlyMemory&lt;byte&gt; data, bool allowCommit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">requestTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">keepUntilAtLeast</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BrightChain.Enumerations.RedundancyContractType.html">RedundancyContractType</a></td>
+        <td><span class="parametername">redundancy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ReadOnlyMemory</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowCommit</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Models.Blocks.Block.html">Block</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="BrightChain.Models.Blocks.Block.html#BrightChain_Models_Blocks_Block_NewBlock_System_DateTime_System_DateTime_BrightChain_Enumerations_RedundancyContractType_System_ReadOnlyMemory_System_Byte__System_Boolean_">Block.NewBlock(DateTime, DateTime, RedundancyContractType, ReadOnlyMemory&lt;Byte&gt;, Boolean)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="BrightChain.Interfaces.IBlock.html">IBlock</a>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="BrightChain.Extensions.BlockMetadataExtensions.html#BrightChain_Extensions_BlockMetadataExtensions_MetaDataBytes_BrightChain_Models_Blocks_Block_">BlockMetadataExtensions.MetaDataBytes(Block)</a>
+  </div>
+  <div>
+      <a class="xref" href="BrightChain.Extensions.BlockMetadataExtensions.html#BrightChain_Extensions_BlockMetadataExtensions_RestoreMetaDataFromBytes_BrightChain_Models_Blocks_Block_System_ReadOnlyMemory_System_Byte__">BlockMetadataExtensions.RestoreMetaDataFromBytes(Block, ReadOnlyMemory&lt;Byte&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Models_Blocks_ConstituentBlockListBlock.md&amp;value=---%0Auid%3A%20BrightChain.Models.Blocks.ConstituentBlockListBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Models/Blocks/ConstituentBlockListBlock.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

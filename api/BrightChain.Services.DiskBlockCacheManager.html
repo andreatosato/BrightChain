@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DiskBlockCacheManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DiskBlockCacheManager
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BrightChain.Services.DiskBlockCacheManager">
+  
+  
+  <h1 id="BrightChain_Services_DiskBlockCacheManager" data-uid="BrightChain.Services.DiskBlockCacheManager" class="text-break">Class DiskBlockCacheManager
+  </h1>
+  <div class="markdown level0 summary"><p>Disk backed version of BPlus tree</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html">BPlusTreeCacheManager</a>&lt;<a class="xref" href="BrightChain.Models.Blocks.BlockHash.html">BlockHash</a>, <a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>, <a class="xref" href="BrightChain.Helpers.BlockHashSerializer.html">BlockHashSerializer</a>, <a class="xref" href="BrightChain.Helpers.BlockSerializer-1.html">BlockSerializer</a>&lt;<a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>&gt;&gt;</div>
+    <div class="level2"><a class="xref" href="BrightChain.Services.BlockCacheManager.html">BlockCacheManager</a></div>
+    <div class="level3"><span class="xref">DiskBlockCacheManager</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="BrightChain.Interfaces.IBPlusTreeCacheManager-2.html">IBPlusTreeCacheManager</a>&lt;<a class="xref" href="BrightChain.Models.Blocks.BlockHash.html">BlockHash</a>, <a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>&gt;</div>
+    <div><a class="xref" href="BrightChain.Interfaces.ICacheManager-2.html">ICacheManager</a>&lt;<a class="xref" href="BrightChain.Models.Blocks.BlockHash.html">BlockHash</a>, <a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="BrightChain.Services.BlockCacheManager.html#BrightChain_Services_BlockCacheManager_AsBlockCacheManager">BlockCacheManager.AsBlockCacheManager</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BlockCacheManager.html#BrightChain_Services_BlockCacheManager_Set_BrightChain_Models_Blocks_TransactableBlock_">BlockCacheManager.Set(TransactableBlock)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BlockCacheManager.html#BrightChain_Services_BlockCacheManager_Set_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock_">BlockCacheManager.Set(BlockHash, TransactableBlock)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_EnableCount">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.EnableCount</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_logger">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.logger</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_expirationCache">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.expirationCache</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_transactionLog">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.transactionLog</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_KeyAdded">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.KeyAdded</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_KeyRemoved">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.KeyRemoved</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_CacheMiss">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.CacheMiss</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_DefaultOptions_CSharpTest_Net_Collections_BPlusTree__0__1__OptionsV2_">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.DefaultOptions(BPlusTree.OptionsV2&lt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_NewTransactionLogOptions">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.NewTransactionLogOptions()</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_TransactionLogPath">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.TransactionLogPath</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_ApplyTreeActions_System_Action_CSharpTest_Net_Collections_BPlusTree__0__1_____">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.ApplyTreeActions(Action&lt;BPlusTree&lt;BlockHash, TransactableBlock&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_Get__0_">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.Get(BlockHash)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_Set__0__1_">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.Set(BlockHash, TransactableBlock)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_Contains__0_">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.Contains(BlockHash)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_Drop__0_System_Boolean_">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.Drop(BlockHash, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_TreeIsEqual_CSharpTest_Net_Collections_BPlusTree__0__1__">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.TreeIsEqual(BPlusTree&lt;BlockHash, TransactableBlock&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_TreeIsSame_CSharpTest_Net_Collections_BPlusTree__0__1__">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.TreeIsSame(BPlusTree&lt;BlockHash, TransactableBlock&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_Commit">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.Commit()</a>
+    </div>
+    <div>
+      <a class="xref" href="BrightChain.Services.BPlusTreeCacheManager-4.html#BrightChain_Services_BPlusTreeCacheManager_4_Rollback">BPlusTreeCacheManager&lt;BlockHash, TransactableBlock, BlockHashSerializer, BlockSerializer&lt;TransactableBlock&gt;&gt;.Rollback()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BrightChain.Services.html">BrightChain.Services</a></h6>
+  <h6><strong>Assembly</strong>: BrightChain.dll</h6>
+  <h5 id="BrightChain_Services_DiskBlockCacheManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DiskBlockCacheManager : BlockCacheManager, IBPlusTreeCacheManager&lt;BlockHash, TransactableBlock&gt;, ICacheManager&lt;BlockHash, TransactableBlock&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_DiskBlockCacheManager__ctor_BrightChain_Services_BlockCacheManager_.md&amp;value=---%0Auid%3A%20BrightChain.Services.DiskBlockCacheManager.%23ctor(BrightChain.Services.BlockCacheManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/DiskBlockCacheManager.cs/#L15">View Source</a>
+  </span>
+  <a id="BrightChain_Services_DiskBlockCacheManager__ctor_" data-uid="BrightChain.Services.DiskBlockCacheManager.#ctor*"></a>
+  <h4 id="BrightChain_Services_DiskBlockCacheManager__ctor_BrightChain_Services_BlockCacheManager_" data-uid="BrightChain.Services.DiskBlockCacheManager.#ctor(BrightChain.Services.BlockCacheManager)">DiskBlockCacheManager(BlockCacheManager)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DiskBlockCacheManager(BlockCacheManager other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BrightChain.Services.BlockCacheManager.html">BlockCacheManager</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_DiskBlockCacheManager__ctor_Microsoft_Extensions_Logging_ILogger_CSharpTest_Net_Collections_BPlusTree_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock__.md&amp;value=---%0Auid%3A%20BrightChain.Services.DiskBlockCacheManager.%23ctor(Microsoft.Extensions.Logging.ILogger%2CCSharpTest.Net.Collections.BPlusTree%7BBrightChain.Models.Blocks.BlockHash%2CBrightChain.Models.Blocks.TransactableBlock%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/DiskBlockCacheManager.cs/#L21">View Source</a>
+  </span>
+  <a id="BrightChain_Services_DiskBlockCacheManager__ctor_" data-uid="BrightChain.Services.DiskBlockCacheManager.#ctor*"></a>
+  <h4 id="BrightChain_Services_DiskBlockCacheManager__ctor_Microsoft_Extensions_Logging_ILogger_CSharpTest_Net_Collections_BPlusTree_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock__" data-uid="BrightChain.Services.DiskBlockCacheManager.#ctor(Microsoft.Extensions.Logging.ILogger,CSharpTest.Net.Collections.BPlusTree{BrightChain.Models.Blocks.BlockHash,BrightChain.Models.Blocks.TransactableBlock})">DiskBlockCacheManager(ILogger, BPlusTree&lt;BlockHash, TransactableBlock&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DiskBlockCacheManager(ILogger logger, BPlusTree&lt;BlockHash, TransactableBlock&gt; tree)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree</span>&lt;<a class="xref" href="BrightChain.Models.Blocks.BlockHash.html">BlockHash</a>, <a class="xref" href="BrightChain.Models.Blocks.TransactableBlock.html">TransactableBlock</a>&gt;</td>
+        <td><span class="parametername">tree</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_DiskBlockCacheManager__ctor_Microsoft_Extensions_Logging_ILogger_CSharpTest_Net_Collections_BPlusTree_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock__OptionsV2_.md&amp;value=---%0Auid%3A%20BrightChain.Services.DiskBlockCacheManager.%23ctor(Microsoft.Extensions.Logging.ILogger%2CCSharpTest.Net.Collections.BPlusTree%7BBrightChain.Models.Blocks.BlockHash%2CBrightChain.Models.Blocks.TransactableBlock%7D.OptionsV2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/DiskBlockCacheManager.cs/#L17">View Source</a>
+  </span>
+  <a id="BrightChain_Services_DiskBlockCacheManager__ctor_" data-uid="BrightChain.Services.DiskBlockCacheManager.#ctor*"></a>
+  <h4 id="BrightChain_Services_DiskBlockCacheManager__ctor_Microsoft_Extensions_Logging_ILogger_CSharpTest_Net_Collections_BPlusTree_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock__OptionsV2_" data-uid="BrightChain.Services.DiskBlockCacheManager.#ctor(Microsoft.Extensions.Logging.ILogger,CSharpTest.Net.Collections.BPlusTree{BrightChain.Models.Blocks.BlockHash,BrightChain.Models.Blocks.TransactableBlock}.OptionsV2)">DiskBlockCacheManager(ILogger, BPlusTree&lt;BlockHash, TransactableBlock&gt;.OptionsV2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DiskBlockCacheManager(ILogger logger, BPlusTree&lt;BlockHash, TransactableBlock&gt;.OptionsV2 optionsV2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree.OptionsV2</span>&lt;&gt;</td>
+        <td><span class="parametername">optionsV2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_DiskBlockCacheManager_DefaultOptions_CSharpTest_Net_Collections_BPlusTree_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock__OptionsV2_.md&amp;value=---%0Auid%3A%20BrightChain.Services.DiskBlockCacheManager.DefaultOptions(CSharpTest.Net.Collections.BPlusTree%7BBrightChain.Models.Blocks.BlockHash%2CBrightChain.Models.Blocks.TransactableBlock%7D.OptionsV2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/DiskBlockCacheManager.cs/#L25">View Source</a>
+  </span>
+  <a id="BrightChain_Services_DiskBlockCacheManager_DefaultOptions_" data-uid="BrightChain.Services.DiskBlockCacheManager.DefaultOptions*"></a>
+  <h4 id="BrightChain_Services_DiskBlockCacheManager_DefaultOptions_CSharpTest_Net_Collections_BPlusTree_BrightChain_Models_Blocks_BlockHash_BrightChain_Models_Blocks_TransactableBlock__OptionsV2_" data-uid="BrightChain.Services.DiskBlockCacheManager.DefaultOptions(CSharpTest.Net.Collections.BPlusTree{BrightChain.Models.Blocks.BlockHash,BrightChain.Models.Blocks.TransactableBlock}.OptionsV2)">DefaultOptions(BPlusTree&lt;BlockHash, TransactableBlock&gt;.OptionsV2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BPlusTree&lt;BlockHash, TransactableBlock&gt;.OptionsV2 DefaultOptions(BPlusTree&lt;BlockHash, TransactableBlock&gt;.OptionsV2 options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree.OptionsV2</span>&lt;&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CSharpTest.Net.Collections.BPlusTree.OptionsV2</span>&lt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="BrightChain.Interfaces.IBPlusTreeCacheManager-2.html">IBPlusTreeCacheManager&lt;Tkey, Tvalue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="BrightChain.Interfaces.ICacheManager-2.html">ICacheManager&lt;Tkey, Tvalue&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/The-Revolution-Network/BrightChain/new/main/apiSpec/new?filename=BrightChain_Services_DiskBlockCacheManager.md&amp;value=---%0Auid%3A%20BrightChain.Services.DiskBlockCacheManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/The-Revolution-Network/BrightChain/blob/main/BrightChain/Services/DiskBlockCacheManager.cs/#L11" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
